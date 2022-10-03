@@ -1,0 +1,3 @@
+[submodule "FlamCamiOSBuild"]
+	path = FlamCamiOSBuild
+	url = git@github.com:homingos/saaskit-cam-ios.git
