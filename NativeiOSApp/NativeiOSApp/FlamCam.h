@@ -15,7 +15,9 @@
 
 - (void)setLaunchOptions: (NSDictionary *)launchOpts;
 
-- (void)initFlamCam: (NSString*) clientKey clientName: (NSString*) clientName source: (NSString*) source;
+- (void)initFlamCam: (NSString*) clientKey privateKey: (NSString*) privateKey clientName: (NSString*) clientName source: (NSString*) source;
+
+
 - (void)loadFlamCamView;
 - (void)unloadFlamCam;
 

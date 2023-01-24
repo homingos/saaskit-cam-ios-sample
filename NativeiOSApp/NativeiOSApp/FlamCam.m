@@ -40,7 +40,8 @@ UnityFramework* UnityFrameworkLoad()
 - (bool)unityIsInitialized {
     return [self ufw] && [[self ufw] appController]; }
 
-- (void)initFlamCam: (NSString*) clientKey clientName: (NSString*) clientName source: (NSString*) source
+- (void)initFlamCam: (NSString*) clientKey privateKey: (NSString*) privateKey  clientName: (NSString*) clientName source: (NSString*) source
+
 {
     if([self unityIsInitialized]) {
         NSLog(@"Unity already initialized, Unload Unity first");
@@ -65,7 +66,8 @@ UnityFramework* UnityFrameworkLoad()
     
     NSMutableDictionary *contentDictionary = [[NSMutableDictionary alloc]init];
     [contentDictionary setValue:clientKey forKey:@"client_key"];
-    [contentDictionary setValue:clientName forKey:@"client_name"];
+    [contentDictionary setValue:privateKey forKey:@"private_key"];
+    [contentDictionary setValue: clientName forKey:@"client_name"];
     [contentDictionary setValue:source forKey:@"source"];
     [contentDictionary setValue:@"" forKey:@"user_token"];
     
@@ -131,3 +133,4 @@ UnityFramework* UnityFrameworkLoad()
 - (void)applicationWillTerminate:(UIApplication *)application { [[[self ufw] appController] applicationWillTerminate: application]; }
 
 @end
+

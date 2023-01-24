@@ -20,7 +20,7 @@
 }
 
 - (IBAction)launchFlamcam:(id)sender {
-    [((FlamCam *)[[UIApplication sharedApplication] delegate]) initFlamCam:@"EnterSaaSKeyHere" clientName: @"EnterSaaSNameHere" source:@"SAAS"];
+    [((FlamCam *)[[UIApplication sharedApplication] delegate]) initFlamCam:@"EnterSaaSKeyHere" privateKey: @"EnterPrivateKeyHere" clientName: @"EnterSaaSNameHere" source:@"SAAS"];
     [((FlamCam *)[[UIApplication sharedApplication] delegate]) loadFlamCamView];
 }
 
